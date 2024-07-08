@@ -1,0 +1,6 @@
+﻿services:
+  kaizen:
+    image: kaizen
+    build:
+      context: .
+      dockerfile: Kaizen/Dockerfile
