@@ -14,4 +14,9 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Functionalities\Planting\" />
+      <Folder Include="Functionalities\Offloading\" />
+    </ItemGroup>
+
 </Project>
