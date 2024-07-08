@@ -1,6 +1,6 @@
-﻿using Kaizen.Integration.Common;
+﻿using Kaizen.Common;
 
-namespace Kaizen.Integration.Imaging;
+namespace Kaizen.Services.Imaging.Interfaces;
 
 public interface IContainerImaging : IHealthCheckable
 {

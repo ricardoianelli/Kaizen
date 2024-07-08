@@ -8,8 +8,8 @@ public class Container
 {
     public string Id { get; private set; }
     public ContainerType ContainerType { get; private set; }
-    public Material? Material { get; private set; }
-
+    public readonly Dictionary<Position, Material?> Materials = new Dictionary<Position, Material?>();
+    
     private Dictionary<Position, WellState> _wellStates = new Dictionary<Position, WellState>();
 
     public Container(string id, ContainerType containerType)
@@ -38,21 +38,26 @@ public class Container
         _wellStates = new Dictionary<Position, WellState>(wellStates);
     }
 
-    public void AddMaterial(Material material)
+    public void AddMaterial(Material material, Position position)
     {
-        if (Material != null)
+        if (Materials.TryGetValue(position, out var oldMaterial))
         {
-            throw new ContainerNotEmptyException(this, material);
+            if (oldMaterial != null)
+            {
+                throw new ContainerNotEmptyException(this, oldMaterial); 
+            }
         }
         
-        material.ChangeContainer(this);
-        Material = material;
+        material.SetContainer(this, position);
+        Materials[position] = material;
     }
 
-    public void RemoveMaterial()
+    public void RemoveMaterial(Position position)
     {
-        Material?.ChangeContainer(null);
-        Material = null;
+        if (!Materials.TryGetValue(position, out var material)) return;
+        
+        material.SetContainer(null);
+        Materials[position] = null;
     }
 
     public void Validate()

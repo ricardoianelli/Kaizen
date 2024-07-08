@@ -15,8 +15,14 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Functionalities\Planting\" />
-      <Folder Include="Functionalities\Offloading\" />
+      <Folder Include="Services\ConveyorBelts\Tests\" />
+      <Folder Include="Services\DataReporting\Tests\" />
+      <Folder Include="Services\Imaging\Tests\" />
+      <Folder Include="Services\Robot\Tests\" />
+      <Folder Include="Services\Scanners\Tests\" />
+      <Folder Include="Services\Sensors\Tests\" />
+      <Folder Include="Services\Workflow\Interfaces\" />
+      <Folder Include="Services\Workflow\Tests\" />
     </ItemGroup>
 
 </Project>

@@ -1,15 +1,15 @@
 ﻿using Kaizen.Common;
 using Kaizen.Domain.Containers;
 
-namespace Kaizen.Integration.Wms;
+namespace Kaizen.Services.DataReporting;
 
-public class WmsContainerTypeInformation
+public class ContainerTypeInformationDto
 {
     public string Name;
     public int ContainerTypeId;
     public List<Position> Positions;
 
-    public WmsContainerTypeInformation(string name, int containerTypeId, List<Position> positions)
+    public ContainerTypeInformationDto(string name, int containerTypeId, List<Position> positions)
     {
         Name = name;
         ContainerTypeId = containerTypeId;

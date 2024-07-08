@@ -1,8 +1,8 @@
 ﻿using Kaizen.Domain.Sets;
 
-namespace Kaizen.Integration.Wms;
+namespace Kaizen.Services.DataReporting;
 
-public class WmsSetInformation
+public class SetInformationDto
 {
     public SetInformation ToSetInformation()
     {

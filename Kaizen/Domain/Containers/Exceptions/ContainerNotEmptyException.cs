@@ -9,10 +9,10 @@ public class ContainerNotEmptyException : Exception
     
     public new string Message;
 
-    public ContainerNotEmptyException(Container container, Material material)
+    public ContainerNotEmptyException(Container container, Material oldMaterial)
     {
         ContainerId = container.Id;
-        MaterialId = material.Id;
-        Message = $"Tried to add material {MaterialId} to container {ContainerId} which already contains material {container.Material?.Id}";
+        MaterialId = oldMaterial.Id;
+        Message = $"Tried to add new material to container {ContainerId} which already contains material {MaterialId}";
     }
 }

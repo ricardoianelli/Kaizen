@@ -1,6 +1,6 @@
-﻿using Kaizen.Integration.Common;
+﻿using Kaizen.Common;
 
-namespace Kaizen.Integration.ConveyorBelts;
+namespace Kaizen.Services.ConveyorBelts.Interfaces;
 
 public interface IConveyorBelt : IHealthCheckable
 {

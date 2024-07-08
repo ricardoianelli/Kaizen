@@ -1,7 +1,6 @@
 ﻿using Kaizen.Common;
-using Kaizen.Integration.Common;
 
-namespace Kaizen.Integration.Robot;
+namespace Kaizen.Services.Robot.Interfaces;
 
 public interface IRobot : IHealthCheckable
 {

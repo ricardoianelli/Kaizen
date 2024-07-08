@@ -1,7 +1,7 @@
 using Kaizen.Common;
 using Kaizen.Domain.Containers;
 
-namespace Kaizen.Integration.Imaging;
+namespace Kaizen.Services.Imaging;
 
 public class ContainerState
 {

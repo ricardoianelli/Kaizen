@@ -1,4 +1,4 @@
-﻿namespace Kaizen.Integration.Common;
+﻿namespace Kaizen.Common;
 
 public class OperationResult
 {

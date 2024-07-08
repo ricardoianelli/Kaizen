@@ -1,6 +1,6 @@
-﻿using Kaizen.Integration.Common;
+﻿using Kaizen.Common;
 
-namespace Kaizen.Integration.Scanners;
+namespace Kaizen.Services.Scanners.Interfaces;
 
 public interface IBarcodeScanner : IHealthCheckable
 {
