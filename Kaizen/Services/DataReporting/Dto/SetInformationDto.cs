@@ -1,6 +1,6 @@
 ﻿using Kaizen.Domain.Sets;
 
-namespace Kaizen.Services.DataReporting;
+namespace Kaizen.Services.DataReporting.Dto;
 
 public class SetInformationDto
 {

@@ -1,7 +1,7 @@
 ﻿using Kaizen.Common;
 using Kaizen.Domain.Containers;
 
-namespace Kaizen.Services.DataReporting;
+namespace Kaizen.Services.DataReporting.Dto;
 
 public class ContainerTypeInformationDto
 {

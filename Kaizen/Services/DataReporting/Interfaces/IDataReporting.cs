@@ -1,6 +1,7 @@
 ﻿using Kaizen.Common;
 using Kaizen.Domain.Containers;
 using Kaizen.Domain.Materials;
+using Kaizen.Services.DataReporting.Dto;
 
 namespace Kaizen.Services.DataReporting.Interfaces;
 
