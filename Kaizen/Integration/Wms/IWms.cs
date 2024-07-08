@@ -4,7 +4,7 @@ using Kaizen.Integration.Common;
 
 namespace Kaizen.Integration.Wms;
 
-public interface IWms
+public interface IWms : IHealthCheckable
 {
     Task<List<string>> GetSetList();
     Task<WmsSetInformation> GetSetInformation(string setId);

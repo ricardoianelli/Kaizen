@@ -3,9 +3,8 @@ using Kaizen.Integration.Common;
 
 namespace Kaizen.Integration.Robot;
 
-public interface IRobot
+public interface IRobot : IHealthCheckable
 {
     Task<OperationResult> PickUp(Position position);
     Task<OperationResult> DropOff(Position position);
-    Task<HealthCheckState> GetHealth();
 }

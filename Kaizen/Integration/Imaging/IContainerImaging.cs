@@ -2,8 +2,7 @@
 
 namespace Kaizen.Integration.Imaging;
 
-public interface IContainerImaging
+public interface IContainerImaging : IHealthCheckable
 {
     Task<ContainerState> GetContainerState();
-    Task<HealthCheckState> GetHealth();
 }
