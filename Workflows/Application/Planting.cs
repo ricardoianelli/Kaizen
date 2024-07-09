@@ -2,9 +2,9 @@
 using Kaizen.Domain.Sets;
 using Robot.Api;
 
-namespace Workflows.Service;
+namespace Workflows.Application;
 
-public class PlantingService
+public class Planting
 {
     public SetInformation CurrentSet { get; private set; }
     
@@ -13,7 +13,7 @@ public class PlantingService
     
     private IRobot _robot;
 
-    public PlantingService(IRobot robot)
+    public Planting(IRobot robot)
     {
         _robot = robot;
     }

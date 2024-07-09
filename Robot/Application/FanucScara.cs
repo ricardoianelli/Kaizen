@@ -1,7 +1,7 @@
 ﻿using Kaizen.CrossCutting;
 using Robot.Api;
 
-namespace Robot.Service;
+namespace Robot.Application;
 
 public class FanucScara : IRobot
 {
