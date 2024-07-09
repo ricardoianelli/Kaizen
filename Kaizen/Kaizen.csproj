@@ -15,14 +15,41 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Services\ConveyorBelts\Tests\" />
-      <Folder Include="Services\DataReporting\Tests\" />
-      <Folder Include="Services\Imaging\Tests\" />
-      <Folder Include="Services\Robot\Tests\" />
-      <Folder Include="Services\Scanners\Tests\" />
-      <Folder Include="Services\Sensors\Tests\" />
-      <Folder Include="Services\Workflow\Interfaces\" />
-      <Folder Include="Services\Workflow\Tests\" />
+      <Folder Include="Documentation\" />
+      <Folder Include="KnownIssues\" />
+      <Folder Include="Modules\ConveyorBelts\Domain\" />
+      <Folder Include="Modules\ConveyorBelts\Service\" />
+      <Folder Include="Modules\ConveyorBelts\Tests\" />
+      <Folder Include="Modules\Database\Api\" />
+      <Folder Include="Modules\Database\Domain\" />
+      <Folder Include="Modules\Database\Service\" />
+      <Folder Include="Modules\Database\Tests\" />
+      <Folder Include="Modules\DataReporting\Domain\" />
+      <Folder Include="Modules\DataReporting\Service\" />
+      <Folder Include="Modules\DataReporting\Tests\" />
+      <Folder Include="Modules\Imaging\Service\" />
+      <Folder Include="Modules\Imaging\Tests\" />
+      <Folder Include="Modules\Logging\Api\" />
+      <Folder Include="Modules\Logging\Domain\" />
+      <Folder Include="Modules\Logging\Service\" />
+      <Folder Include="Modules\Logging\Tests\" />
+      <Folder Include="Modules\Robot\Domain\" />
+      <Folder Include="Modules\Robot\Tests\" />
+      <Folder Include="Modules\Safety\Domain\" />
+      <Folder Include="Modules\Safety\Service\" />
+      <Folder Include="Modules\Safety\Tests\" />
+      <Folder Include="Modules\Scanners\Domain\" />
+      <Folder Include="Modules\Scanners\Service\" />
+      <Folder Include="Modules\Scanners\Tests\" />
+      <Folder Include="Modules\Sensors\Domain\" />
+      <Folder Include="Modules\Sensors\Service\" />
+      <Folder Include="Modules\Sensors\Tests\" />
+      <Folder Include="Modules\UI\Api\" />
+      <Folder Include="Modules\UI\Domain\" />
+      <Folder Include="Modules\UI\Service\" />
+      <Folder Include="Modules\UI\Tests\" />
+      <Folder Include="Modules\Workflows\Api\" />
+      <Folder Include="Modules\Workflows\Tests\" />
     </ItemGroup>
 
 </Project>
