@@ -1,6 +1,6 @@
-﻿using Kaizen.Modules.Workflows.Domain.Materials;
+﻿using Kaizen.Domain.Materials;
 
-namespace Kaizen.Modules.Workflows.Domain.Containers.Exceptions;
+namespace Kaizen.Domain.Containers.Exceptions;
 
 public class ContainerNotEmptyException : Exception
 {

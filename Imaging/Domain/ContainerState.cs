@@ -1,5 +1,5 @@
 using Kaizen.CrossCutting;
-using Kaizen.Modules.Workflows.Domain.Containers;
+using Kaizen.Domain.Containers;
 
 namespace Imaging.Domain;
 

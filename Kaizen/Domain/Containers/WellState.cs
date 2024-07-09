@@ -1,4 +1,4 @@
-﻿namespace Kaizen.Modules.Workflows.Domain.Containers;
+﻿namespace Kaizen.Domain.Containers;
 
 public enum WellState
 {

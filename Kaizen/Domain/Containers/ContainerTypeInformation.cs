@@ -1,7 +1,6 @@
 ﻿using Kaizen.CrossCutting;
-using Kaizen.Modules.Workflows.Domain.Containers;
 
-namespace Workflows.Domain.Containers;
+namespace Kaizen.Domain.Containers;
 
 public class ContainerTypeInformation
 {

@@ -1,5 +1,5 @@
-﻿using Kaizen.Modules.Workflows.Domain.Containers;
-using Kaizen.Modules.Workflows.Domain.Sets;
+﻿using Kaizen.Domain.Containers;
+using Kaizen.Domain.Sets;
 using Robot.Api;
 
 namespace Workflows.Service;

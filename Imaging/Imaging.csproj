@@ -7,13 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Service\" />
+      <Folder Include="Application\" />
       <Folder Include="Tests\" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Kaizen\Kaizen.csproj" />
-      <ProjectReference Include="..\Workflows\Workflows.csproj" />
     </ItemGroup>
 
 </Project>

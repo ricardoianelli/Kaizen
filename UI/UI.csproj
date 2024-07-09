@@ -9,7 +9,7 @@
     <ItemGroup>
       <Folder Include="Api\" />
       <Folder Include="Domain\" />
-      <Folder Include="Service\" />
+      <Folder Include="Application\" />
       <Folder Include="Tests\" />
     </ItemGroup>
 

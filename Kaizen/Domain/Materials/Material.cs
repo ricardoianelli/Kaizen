@@ -1,7 +1,7 @@
 ﻿using Kaizen.CrossCutting;
-using Kaizen.Modules.Workflows.Domain.Containers;
+using Kaizen.Domain.Containers;
 
-namespace Kaizen.Modules.Workflows.Domain.Materials;
+namespace Kaizen.Domain.Materials;
 
 public class Material
 {

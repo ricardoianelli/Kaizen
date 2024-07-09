@@ -1,4 +1,4 @@
-namespace Kaizen.Modules.Workflows.Domain.Materials;
+namespace Kaizen.Domain.Materials;
 
 public enum MaterialType
 {

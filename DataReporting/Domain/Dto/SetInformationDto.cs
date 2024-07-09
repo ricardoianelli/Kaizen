@@ -1,4 +1,4 @@
-﻿using Kaizen.Modules.Workflows.Domain.Sets;
+﻿using Kaizen.Domain.Sets;
 
 namespace DataReporting.Domain.Dto;
 

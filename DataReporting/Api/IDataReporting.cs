@@ -1,7 +1,7 @@
 ﻿using DataReporting.Domain.Dto;
 using Kaizen.CrossCutting;
-using Kaizen.Modules.Workflows.Domain.Containers;
-using Kaizen.Modules.Workflows.Domain.Materials;
+using Kaizen.Domain.Containers;
+using Kaizen.Domain.Materials;
 
 namespace DataReporting.Api;
 

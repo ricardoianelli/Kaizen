@@ -1,6 +1,5 @@
 ﻿using Kaizen.CrossCutting;
-using Kaizen.Modules.Workflows.Domain.Containers;
-using Workflows.Domain.Containers;
+using Kaizen.Domain.Containers;
 
 namespace DataReporting.Domain.Dto;
 

@@ -1,8 +1,8 @@
 ﻿using Kaizen.CrossCutting;
-using Kaizen.Modules.Workflows.Domain.Containers.Exceptions;
-using Kaizen.Modules.Workflows.Domain.Materials;
+using Kaizen.Domain.Containers.Exceptions;
+using Kaizen.Domain.Materials;
 
-namespace Kaizen.Modules.Workflows.Domain.Containers;
+namespace Kaizen.Domain.Containers;
 
 public class Container
 {
