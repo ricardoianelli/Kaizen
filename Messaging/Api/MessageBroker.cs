@@ -3,27 +3,27 @@ using Messaging.Domain;
 
 namespace Messaging.Api;
 
-public static class Messaging
+public static class MessageBroker
 {
-    private static IMessageBroker _messageBroker;
+    private static IMessageBroker _broker;
 
-    static Messaging()
+    static MessageBroker()
     {
-        _messageBroker = new CSharpMessageBroker();
+        _broker = new CSharpMessageBroker();
     }
     
     internal static void SetBroker(IMessageBroker broker)
     {
-        _messageBroker = broker;
+        _broker = broker;
     }
     
     public static async Task Publish(string topic, Message message)
     {
-        await _messageBroker.Publish(topic, message);
+        await _broker.Publish(topic, message);
     }
     
     public static async Task Subscribe(string topic, Action<Message> handler)
     {
-        await _messageBroker.Subscribe(topic, handler);
+        await _broker.Subscribe(topic, handler);
     }
 }
