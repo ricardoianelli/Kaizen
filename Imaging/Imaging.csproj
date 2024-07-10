@@ -8,11 +8,11 @@
 
     <ItemGroup>
       <Folder Include="Application\" />
+      <Folder Include="Domain\" />
       <Folder Include="Tests\" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Kaizen\Kaizen.csproj" />
+      <ProjectReference Include="..\Shared\Shared.csproj" />
     </ItemGroup>
-
 </Project>

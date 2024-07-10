@@ -1,4 +1,4 @@
-﻿using Kaizen.CrossCutting;
+﻿using Shared.CrossCutting;
 
 namespace Sensors.Api;
 

@@ -1,7 +1,6 @@
-using Kaizen.CrossCutting;
-using Kaizen.Domain.Containers;
+using Shared.CrossCutting;
 
-namespace Imaging.Domain;
+namespace Shared.Domain.Containers;
 
 public class ContainerState
 {

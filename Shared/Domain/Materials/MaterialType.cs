@@ -1,4 +1,4 @@
-namespace Kaizen.Domain.Materials;
+namespace Shared.Domain.Materials;
 
 public enum MaterialType
 {

@@ -1,5 +1,5 @@
-﻿using Imaging.Domain;
-using Kaizen.CrossCutting;
+﻿using Shared.CrossCutting;
+using Shared.Domain.Containers;
 
 namespace Imaging.Api;
 

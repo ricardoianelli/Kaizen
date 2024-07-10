@@ -1,6 +1,6 @@
-﻿using Kaizen.CrossCutting;
+﻿using Shared.CrossCutting;
 
-namespace Kaizen.Domain.Containers;
+namespace Shared.Domain.Containers;
 
 public class ContainerTypeInformation
 {

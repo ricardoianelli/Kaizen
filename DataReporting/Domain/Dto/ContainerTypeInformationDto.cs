@@ -1,9 +1,9 @@
-﻿using Kaizen.CrossCutting;
-using Kaizen.Domain.Containers;
+﻿using Shared.CrossCutting;
+using Shared.Domain.Containers;
 
 namespace DataReporting.Domain.Dto;
 
-public class ContainerTypeInformationDto
+internal class ContainerTypeInformationDto
 {
     public string Name;
     public int ContainerTypeId;

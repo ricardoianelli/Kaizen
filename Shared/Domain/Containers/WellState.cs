@@ -1,4 +1,4 @@
-﻿namespace Kaizen.Domain.Containers;
+﻿namespace Shared.Domain.Containers;
 
 public enum WellState
 {

@@ -1,7 +1,7 @@
-﻿using Kaizen.CrossCutting;
-using Kaizen.Domain.Containers;
+﻿using Shared.CrossCutting;
+using Shared.Domain.Containers;
 
-namespace Kaizen.Domain.Materials;
+namespace Shared.Domain.Materials;
 
 public class Material
 {

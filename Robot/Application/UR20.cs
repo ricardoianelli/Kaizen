@@ -1,9 +1,9 @@
-﻿using Kaizen.CrossCutting;
-using Robot.Api;
+﻿using Robot.Api;
+using Shared.CrossCutting;
 
 namespace Robot.Application;
 
-public class Ur20 : IRobot
+internal class Ur20 : IRobot
 {
     public Task<HealthCheckState> GetHealth()
     {

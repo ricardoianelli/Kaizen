@@ -1,4 +1,4 @@
-﻿namespace Kaizen.CrossCutting;
+﻿namespace Shared.CrossCutting;
 
 public enum HealthCheckState
 {

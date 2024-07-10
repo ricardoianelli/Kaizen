@@ -1,8 +1,8 @@
-﻿using Kaizen.CrossCutting;
-using Kaizen.Domain.Containers.Exceptions;
-using Kaizen.Domain.Materials;
+﻿using Shared.CrossCutting;
+using Shared.Domain.Containers.Exceptions;
+using Shared.Domain.Materials;
 
-namespace Kaizen.Domain.Containers;
+namespace Shared.Domain.Containers;
 
 public class Container
 {

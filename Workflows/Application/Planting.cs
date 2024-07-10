@@ -1,10 +1,10 @@
-﻿using Kaizen.Domain.Containers;
-using Kaizen.Domain.Sets;
-using Robot.Api;
+﻿using Robot.Api;
+using Shared.Domain.Containers;
+using Shared.Domain.Sets;
 
 namespace Workflows.Application;
 
-public class Planting
+internal class Planting
 {
     public SetInformation CurrentSet { get; private set; }
     

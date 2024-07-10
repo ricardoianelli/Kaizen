@@ -1,6 +1,6 @@
-﻿using Kaizen.Domain.Containers;
+﻿using Shared.Domain.Containers;
 
-namespace Kaizen.Domain.Sets;
+namespace Shared.Domain.Sets;
 
 public class SetInformation
 {

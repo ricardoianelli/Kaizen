@@ -19,4 +19,19 @@
       <Folder Include="KnownIssues\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\ConveyorBelts\ConveyorBelts.csproj" />
+      <ProjectReference Include="..\Database\Database.csproj" />
+      <ProjectReference Include="..\DataReporting\DataReporting.csproj" />
+      <ProjectReference Include="..\Imaging\Imaging.csproj" />
+      <ProjectReference Include="..\Logging\Logging.csproj" />
+      <ProjectReference Include="..\Robot\Robot.csproj" />
+      <ProjectReference Include="..\Safety\Safety.csproj" />
+      <ProjectReference Include="..\Scanners\Scanners.csproj" />
+      <ProjectReference Include="..\Sensors\Sensors.csproj" />
+      <ProjectReference Include="..\Shared\Shared.csproj" />
+      <ProjectReference Include="..\UI\UI.csproj" />
+      <ProjectReference Include="..\Workflows\Workflows.csproj" />
+    </ItemGroup>
+
 </Project>

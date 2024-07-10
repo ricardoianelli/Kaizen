@@ -1,4 +1,4 @@
-﻿namespace Kaizen.CrossCutting;
+﻿namespace Shared.CrossCutting;
 
 public class Position
 {

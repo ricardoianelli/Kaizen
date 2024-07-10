@@ -1,6 +1,6 @@
-﻿using Kaizen.Domain.Materials;
+﻿using Shared.Domain.Materials;
 
-namespace Kaizen.Domain.Containers.Exceptions;
+namespace Shared.Domain.Containers.Exceptions;
 
 public class ContainerNotEmptyException : Exception
 {

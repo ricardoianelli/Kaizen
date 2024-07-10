@@ -1,8 +1,8 @@
-﻿using Kaizen.Domain.Sets;
+﻿using Shared.Domain.Sets;
 
 namespace DataReporting.Domain.Dto;
 
-public class SetInformationDto
+internal class SetInformationDto
 {
     public SetInformation ToSetInformation()
     {

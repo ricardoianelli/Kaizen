@@ -1,5 +1,5 @@
-﻿using Kaizen.CrossCutting;
-using Safety.Api;
+﻿using Safety.Api;
+using Shared.CrossCutting;
 
 namespace Robot.Api;
 
