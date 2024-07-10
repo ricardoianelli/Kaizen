@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workflows", "Workflows\Work
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{75D3016F-1E0A-421E-95B2-A4633C970DBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging", "Messaging\Messaging.csproj", "{3BA0FCBF-B3D4-477D-9707-04B954ED5DAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,5 +91,9 @@ Global
 		{75D3016F-1E0A-421E-95B2-A4633C970DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75D3016F-1E0A-421E-95B2-A4633C970DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75D3016F-1E0A-421E-95B2-A4633C970DBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BA0FCBF-B3D4-477D-9707-04B954ED5DAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BA0FCBF-B3D4-477D-9707-04B954ED5DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BA0FCBF-B3D4-477D-9707-04B954ED5DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BA0FCBF-B3D4-477D-9707-04B954ED5DAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
