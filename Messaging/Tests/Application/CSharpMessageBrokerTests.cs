@@ -16,7 +16,7 @@ public class CSharpMessageBrokerTests
         var mockedMethod = new Mock<Action<Message>>();
         var topic = "test_topic";
         _messageBroker.Subscribe(topic, mockedMethod.Object);
-        _messageBroker.Publish(topic, new Message(MessageType.MaterialPickupRequest, ""));
+        _messageBroker.Publish(topic, new Message());
         mockedMethod.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Once());
     }
     
@@ -25,7 +25,7 @@ public class CSharpMessageBrokerTests
     {
         var mockedMethod = new Mock<Action<Message>>();
         var topic = "test_topic";
-        _messageBroker.Publish(topic, new Message(MessageType.MaterialPickupRequest, ""));
+        _messageBroker.Publish(topic, new Message());
         mockedMethod.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Never());
     }
     
@@ -38,7 +38,7 @@ public class CSharpMessageBrokerTests
         var topic = "test_topic";
         _messageBroker.Subscribe(topic, mockedMethod1.Object);
         _messageBroker.Subscribe(topic, mockedMethod3.Object);
-        _messageBroker.Publish(topic, new Message(MessageType.MaterialPickupRequest, ""));
+        _messageBroker.Publish(topic, new Message());
         mockedMethod1.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Once);
         mockedMethod2.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Never);
         mockedMethod3.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Once);
@@ -52,17 +52,17 @@ public class CSharpMessageBrokerTests
         var topic = "test_topic";
         _messageBroker.Subscribe("test_topic", mockedMethod1.Object);
         _messageBroker.Subscribe("test_topic", mockedMethod2.Object);
-        _messageBroker.Publish(topic, new Message(MessageType.MaterialPickupRequest, ""));
+        _messageBroker.Publish(topic, new Message());
         mockedMethod1.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Exactly(1));
         mockedMethod2.Verify(x => x.Invoke(It.IsAny<Message>()),Times.Exactly(1));
         
         _messageBroker.Unsubscribe("test_topic", mockedMethod1.Object); // +1 to handlerCalls
-        _messageBroker.Publish(topic, new Message(MessageType.MaterialPickupRequest, ""));
+        _messageBroker.Publish(topic, new Message());
         mockedMethod1.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Exactly(1));
         mockedMethod2.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Exactly(2));
         
         _messageBroker.Unsubscribe("test_topic", mockedMethod2.Object); // +2 to handlerCalls
-        _messageBroker.Publish(topic, new Message(MessageType.MaterialPickupRequest, ""));
+        _messageBroker.Publish(topic, new Message());
         mockedMethod1.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Exactly(1));
         mockedMethod2.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Exactly(2));
     }

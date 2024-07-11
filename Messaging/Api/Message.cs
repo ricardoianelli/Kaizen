@@ -1,27 +1,25 @@
-﻿using System.Text;
-
-namespace Messaging.Api;
+﻿namespace Messaging.Api;
 
 public class Message
 {
-    public readonly MessageType MessageType;
     public readonly object? Payload;
 
-    public Message(MessageType messageType, object? payload)
+    public Message()
     {
-        MessageType = messageType;
+    }
+    
+    public Message(object? payload)
+    {
         Payload = payload;
     }
 
     public override string ToString()
     {
-        var sb = new StringBuilder();
-        sb.Append($"MessageType: {MessageType}");
-        if (Payload != null)
+        if (Payload is null)
         {
-            sb.Append($" - Payload: {Payload}");
+            return "{}";
         }
-
-        return sb.ToString();
+        
+        return "{" + Payload + "}";
     }
 }
