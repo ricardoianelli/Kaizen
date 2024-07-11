@@ -1,4 +1,5 @@
-﻿using Shared;
+﻿using Safety.Application;
+using Shared;
 
 namespace Safety.Api;
 

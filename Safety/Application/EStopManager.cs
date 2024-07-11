@@ -1,11 +1,12 @@
 ﻿using Logging.Api;
 using Messaging.Api;
+using Safety.Api;
 
-namespace Safety.Api;
+namespace Safety.Application;
 
-public static class EStopManager
+internal static class EStopManager
 {
-    public const string EStopTopic = "EStop";
+    internal const int EStopCheckingDelayInMs = 1000;
     
     private static bool _isPressed;
     
@@ -35,12 +36,15 @@ public static class EStopManager
             {
                 Logger.Log(e.Message);
             }
+
+            await Task.Delay(EStopCheckingDelayInMs);
         }
     }
 
     private static void ToggleEStop()
     {
+        Logger.Log("Toggle EStop!");
         _isPressed = !_isPressed;
-        _ = MessageNotifier.Publish(EStopTopic, _isPressed);
+        _ = MessageNotifier.Publish(Safety.Api.Topics.EStopStateChanged, _isPressed);
     }
 }

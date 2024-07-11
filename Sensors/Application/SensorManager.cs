@@ -1,13 +1,13 @@
 ﻿using Logging.Api;
 using Messaging.Api;
 using Sensors.Domain;
+using Topics = Sensors.Api.Topics;
 
 namespace Sensors.Application;
 
 internal static class SensorManager
 {
     private const int SensorCheckingDelayInMs = 1000;
-    private const string SensorStateChangedTopic = "SensorStateChanged";
     
     private static readonly List<ISensor> Sensors = [];
     
@@ -36,8 +36,8 @@ internal static class SensorManager
                 {
                     sensor.UpdateState();
 
-                    if (!sensor.HasStateChanged()) continue;
-                    tasks.Add(MessageNotifier.Publish(SensorStateChangedTopic + sensor.GetId(), sensor.GetState()));
+                    if (sensor.GetId() != 3 || !sensor.HasStateChanged()) continue;
+                    tasks.Add(MessageNotifier.Publish(Topics.ImagingSensorStateChanged, sensor.GetState()));
                 }
 
                 await Task.WhenAll(tasks);

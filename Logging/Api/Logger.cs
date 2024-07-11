@@ -6,7 +6,7 @@ public static class Logger
 {
     static Logger()
     {
-        _ = MessageNotifier.Subscribe("global", OnNewMessage);
+        _ = MessageNotifier.Subscribe(Messaging.Api.Topics.Global, OnNewMessage);
     }
 
     public static void Log(string msg)
@@ -14,7 +14,7 @@ public static class Logger
         Console.WriteLine("New Log: " + msg);
     }
 
-    private static void OnNewMessage(object? msg)
+    private static void OnNewMessage(Message msg)
     {
         Console.WriteLine("New Message: " + msg);
     }

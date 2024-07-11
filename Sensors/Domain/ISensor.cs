@@ -1,4 +1,5 @@
-﻿using Shared.CrossCutting;
+﻿using Sensors.Api;
+using Shared.CrossCutting;
 
 namespace Sensors.Domain;
 

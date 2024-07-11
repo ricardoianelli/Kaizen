@@ -1,4 +1,4 @@
-﻿namespace Sensors.Domain;
+﻿namespace Sensors.Api;
 
 public enum SensorState
 {

@@ -1,12 +1,9 @@
 ﻿using System.Runtime.CompilerServices;
+using Messaging.Api;
 using Messaging.Application;
 using Messaging.Domain;
 using Moq;
 using Xunit;
-
-// This enables Moq to "see" things with internal visibility.
-// Source: https://github.com/devlooped/moq/wiki/Quickstart#advanced-features
-[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
 
 namespace Messaging.Tests.Application;
 

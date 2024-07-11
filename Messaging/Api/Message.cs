@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace Messaging.Domain;
+namespace Messaging.Api;
 
-internal class Message
+public class Message
 {
     public readonly string Topic;
     public readonly object? Payload;
@@ -16,5 +16,17 @@ internal class Message
     public override string ToString()
     {
         return JsonConvert.SerializeObject(this);
+    }
+
+    public bool TryUnpack<T>(out T? payload)
+    {
+        if (Payload?.GetType() == typeof(T))
+        {
+            payload = (T) Payload;
+            return true;
+        }
+
+        payload = default;
+        return false;
     }
 }
