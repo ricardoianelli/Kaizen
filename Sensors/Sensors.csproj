@@ -4,15 +4,17 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <OutputType>Library</OutputType>
     </PropertyGroup>
 
     <ItemGroup>
       <Folder Include="Application\" />
-      <Folder Include="Service\" />
       <Folder Include="Tests\" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Logging\Logging.csproj" />
+      <ProjectReference Include="..\Messaging\Messaging.csproj" />
       <ProjectReference Include="..\Shared\Shared.csproj" />
     </ItemGroup>
 

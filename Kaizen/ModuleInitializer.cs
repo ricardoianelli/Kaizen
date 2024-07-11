@@ -12,5 +12,6 @@ public class ModuleInitializer : IModule
     {
         Messaging.Api.ModuleInitializer.Initialize();
         Logging.Api.ModuleInitializer.Initialize();
+        Sensors.Api.ModuleInitializer.Initialize();
     }
 }
