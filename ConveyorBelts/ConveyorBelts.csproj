@@ -7,13 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Domain\" />
-      <Folder Include="Application\" />
       <Folder Include="Tests\" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Safety\Safety.csproj" />
+      <ProjectReference Include="..\Logging\Logging.csproj" />
       <ProjectReference Include="..\Shared\Shared.csproj" />
     </ItemGroup>
 

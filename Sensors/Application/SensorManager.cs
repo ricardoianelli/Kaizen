@@ -28,20 +28,25 @@ internal static class SensorManager
     {
         while (true)
         {
-            Logger.Log("Checking sensors...");
-            
-            var tasks = new List<Task>();
-
-            foreach (var sensor in Sensors)
+            try
             {
-                sensor.UpdateState();
+                var tasks = new List<Task>();
 
-                if (!sensor.HasStateChanged()) return;
-                tasks.Add(MessageBroker.Publish(SensorStateChangedTopic, sensor.GetState()));
+                foreach (var sensor in Sensors)
+                {
+                    sensor.UpdateState();
+
+                    if (!sensor.HasStateChanged()) continue;
+                    tasks.Add(MessageNotifier.Publish(SensorStateChangedTopic + sensor.GetId(), sensor.GetState()));
+                }
+
+                await Task.WhenAll(tasks);
+                await Task.Delay(SensorCheckingDelayInMs);
             }
-
-            await Task.WhenAll(tasks);
-            await Task.Delay(SensorCheckingDelayInMs);
+            catch (Exception e)
+            {
+                Logger.Log(e.Message);
+            }
         }
     }
 }

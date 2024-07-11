@@ -6,7 +6,7 @@ public static class Logger
 {
     static Logger()
     {
-        _ = MessageBroker.Subscribe("global", OnNewMessage);
+        _ = MessageNotifier.Subscribe("global", OnNewMessage);
     }
 
     public static void Log(string msg)

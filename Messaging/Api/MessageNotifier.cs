@@ -3,12 +3,12 @@ using Messaging.Domain;
 
 namespace Messaging.Api;
 
-public static class MessageBroker
+public static class MessageNotifier
 {
     public const string GlobalTopic = "global";
     private static IMessageBroker _broker;
 
-    static MessageBroker()
+    static MessageNotifier()
     {
         _broker = new CSharpMessageBroker();
     }

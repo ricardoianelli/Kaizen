@@ -51,7 +51,7 @@ internal class Sensor : ISensor
         var random = new Random();
         if (random.Next(0, 10) == 3)
         {
-            CurrentState = SensorState.On;
+            CurrentState = CurrentState == SensorState.On ? SensorState.Off : SensorState.On;
         }    
     }
 }

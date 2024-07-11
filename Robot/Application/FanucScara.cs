@@ -20,12 +20,12 @@ internal class FanucScara : IRobot
         throw new NotImplementedException();
     }
 
-    public void OnEStopPressed()
+    public Task OnEStopPressed()
     {
         throw new NotImplementedException();
     }
 
-    public void OnEStopReleased()
+    public Task OnEStopReleased()
     {
         throw new NotImplementedException();
     }
