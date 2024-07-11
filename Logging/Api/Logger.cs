@@ -1,4 +1,5 @@
 ﻿using Messaging.Api;
+using Messaging.Domain;
 
 namespace Logging.Api;
 
@@ -14,7 +15,7 @@ public static class Logger
         Console.WriteLine("New Log: " + msg);
     }
 
-    private static void OnNewMessage(Message msg)
+    private static void OnNewMessage(object? msg)
     {
         Console.WriteLine("New Message: " + msg);
     }

@@ -7,7 +7,7 @@ internal class CSharpMessageBroker : IMessageBroker
 {
     private readonly Dictionary<string, Action<Message>> _topics = new();
 
-    public Task Connect(ConnectionParams connectionParams)
+    public Task Connect(BrokerConnectionParams brokerConnectionParams)
     {
         return Task.CompletedTask;
     }
@@ -17,11 +17,6 @@ internal class CSharpMessageBroker : IMessageBroker
         return Task.CompletedTask;
     }
 
-    public Task Query(string topic, object queryDetails)
-    {
-        return Task.CompletedTask;
-    }
-    
     public Task Publish(string topic, Message message)
     {
         if (_topics.TryGetValue(topic, out var listeners))

@@ -1,8 +1,12 @@
-﻿using Messaging.Api;
+﻿using System.Runtime.CompilerServices;
 using Messaging.Application;
 using Messaging.Domain;
 using Moq;
 using Xunit;
+
+// This enables Moq to "see" things with internal visibility.
+// Source: https://github.com/devlooped/moq/wiki/Quickstart#advanced-features
+[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
 
 namespace Messaging.Tests.Application;
 
@@ -16,7 +20,7 @@ public class CSharpMessageBrokerTests
         var mockedMethod = new Mock<Action<Message>>();
         var topic = "test_topic";
         _messageBroker.Subscribe(topic, mockedMethod.Object);
-        _messageBroker.Publish(topic, new Message());
+        _messageBroker.Publish(topic, new Message(topic, null));
         mockedMethod.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Once());
     }
     
@@ -25,7 +29,7 @@ public class CSharpMessageBrokerTests
     {
         var mockedMethod = new Mock<Action<Message>>();
         var topic = "test_topic";
-        _messageBroker.Publish(topic, new Message());
+        _messageBroker.Publish(topic, new Message(topic, null));
         mockedMethod.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Never());
     }
     
@@ -38,7 +42,7 @@ public class CSharpMessageBrokerTests
         var topic = "test_topic";
         _messageBroker.Subscribe(topic, mockedMethod1.Object);
         _messageBroker.Subscribe(topic, mockedMethod3.Object);
-        _messageBroker.Publish(topic, new Message());
+        _messageBroker.Publish(topic, new Message(topic, null));
         mockedMethod1.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Once);
         mockedMethod2.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Never);
         mockedMethod3.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Once);
@@ -52,17 +56,17 @@ public class CSharpMessageBrokerTests
         var topic = "test_topic";
         _messageBroker.Subscribe("test_topic", mockedMethod1.Object);
         _messageBroker.Subscribe("test_topic", mockedMethod2.Object);
-        _messageBroker.Publish(topic, new Message());
+        _messageBroker.Publish(topic, new Message(topic, null));
         mockedMethod1.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Exactly(1));
         mockedMethod2.Verify(x => x.Invoke(It.IsAny<Message>()),Times.Exactly(1));
         
         _messageBroker.Unsubscribe("test_topic", mockedMethod1.Object); // +1 to handlerCalls
-        _messageBroker.Publish(topic, new Message());
+        _messageBroker.Publish(topic, new Message(topic, null));
         mockedMethod1.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Exactly(1));
         mockedMethod2.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Exactly(2));
         
         _messageBroker.Unsubscribe("test_topic", mockedMethod2.Object); // +2 to handlerCalls
-        _messageBroker.Publish(topic, new Message());
+        _messageBroker.Publish(topic, new Message(topic, null));
         mockedMethod1.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Exactly(1));
         mockedMethod2.Verify(x => x.Invoke(It.IsAny<Message>()), Times.Exactly(2));
     }

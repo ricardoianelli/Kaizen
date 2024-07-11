@@ -1,13 +1,13 @@
-﻿namespace Messaging.Domain;
+﻿namespace Messaging.Api;
 
-internal class ConnectionParams
+public class BrokerConnectionParams
 {
     public string Host;
     public string UserName;
     public string Password;
     public int Port;
 
-    internal ConnectionParams(string host, int port, string userName, string password)
+    public BrokerConnectionParams(string host, int port, string userName, string password)
     {
         Host = host;
         UserName = userName;
