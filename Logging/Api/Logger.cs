@@ -1,5 +1,4 @@
 ﻿using Messaging.Api;
-using Messaging.Domain;
 
 namespace Logging.Api;
 

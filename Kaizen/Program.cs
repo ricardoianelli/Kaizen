@@ -2,9 +2,16 @@
 using Messaging.Api;
 using Shared.CrossCutting;
 
-//var logger = new Logger();
-Logger.Log("Test msg 1"); // For this to work I need to call logger first so the static instance is created.
+namespace Kaizen;
 
-await MessageBroker.Publish("PositionChanged", new Position(1, 2));
-Logger.Log("Press any key to finish.");
-Console.ReadKey();
+static class Program
+{
+    public static async Task Main(String[] args)
+    {
+        ModuleInitializer.Initialize();
+
+        await MessageBroker.Publish("PositionChanged", new Position(1, 2));
+        Logger.Log("Press any key to finish.");
+        Console.ReadKey();
+    }
+}
